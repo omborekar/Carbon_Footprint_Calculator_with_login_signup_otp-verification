@@ -12,15 +12,15 @@ app.secret_key = 'xyzsdfg'
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '0701'  # Replace with your MySQL password
-app.config['MYSQL_DB'] = 'login'
+app.config['MYSQL_PASSWORD'] = 'pass'  # Replace with your MySQL password
+app.config['MYSQL_DB'] = 'dbname'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 mysql = MySQL(app)
 
 def send_otp_email(email, otp):
-    from_email = 'omborekar18@gmail.com'  # Replace with your Gmail email
-    password = 'nshqgrjgerarieex'  # Replace with your Gmail app password
+    from_email = 'example@gmail.com'  # Replace with your Gmail email
+    password = 'password'  # Replace with your Gmail app password
 
     subject = 'OTP Verification'
     message = f'Welcome to CO2 footprint Calculator\n\n\tYour OTP for registration: {otp}\n\n\t©CO2 Footprint Calculator'
