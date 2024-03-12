@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+    <title>Carbon Footprint Calculator</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark" style="display: flexbox;justify-content: space-between;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/static/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Carbon Footprint Calculator
+          </a>
+          <div style="margin-left: auto; color: rgb(255, 255, 255);">   
+            User : <strong>{{session.name}} </strong>
+        </div>
+          <a href="{{ url_for('logout') }}" style="color: rgb(255, 255, 255);margin-left: 20px;"><i class="fa-solid fa-right-from-bracket"></i></a>
+          
+        </div>
+      </nav>
+      <div class="container-fluid"></div><br>
+
+    <div class="container1"> 
+    
+        <div class="top-image" style="height: 200px; overflow: hidden;">
+            <img src="/static/head.jpg" alt="Top Image" >
+        </div>
+        <div class="container2">
+            <br> <h1>Carbon Footprint Calculator</h1>
+        
+        <div class="form-group">
+            <label for="carBrand">Choose your car brand:</label>
+            <select id="carBrand" class="input-field" onchange="populateCarModels()" aria-placeholder="Car Brand">
+                <option value="" disabled selected>Select a car Brand</option>
+                <!-- Brands will be populated dynamically using JavaScript -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="carModel">Choose your car model:</label>
+            <select id="carModel" class="input-field">
+                <option value="" disabled selected>Select a Car Model</option>
+                <!-- Models will be populated dynamically using JavaScript -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="fuelType">Fuel Type:</label>
+            <select id="fuelType" class="input-field">
+                <option value="" disabled selected>Select Fuel Type</option>
+                <option value="petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+            </select>
+        </div>
+        <label>Mileage:</label>
+        <div class="input-group mb-3" style="color: black;">   
+            <input type="text" class="form-control" placeholder="Mileage" aria-label="Recipient's username" aria-describedby="basic-addon2" id="mileage">
+            <span class="input-group-text" id="basic-addon2">Km/L</span>
+          </div>
+
+          <label>Distance:</label>
+          <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Distance" aria-label="Recipient's username" aria-describedby="basic-addon2" id="distance">
+              <span class="input-group-text" id="basic-addon2">Km</span>
+            </div>
+
+        <div class="form-group">
+            <label for="frequency">Driving frequency:</label>
+            <select id="frequency" class="input-field">
+                <option value="" disabled selected>Select Frequency</option>
+                <option value="daily">Daily</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+           
+            <button onclick="calculateCarbonFootprint() "class="btn btn-primary" type="button">Calculate</button>
+        </div>
+        
+
+    </div>
+    </div>
+    
+    <div id="result" class="container-result" style="display: none;">
+    
+    </div>
+    
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>    
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/5f544e90be.js" crossorigin="anonymous"></script>
+<script>populateCarBrands();</script>
+</div>    <div class="footer-container"><footer >&copy;Copyright 2023-24</footer></div>
+</body>
+</html>

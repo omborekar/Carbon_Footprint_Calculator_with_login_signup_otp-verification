@@ -1,0 +1,162 @@
+body {
+    font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            
+            align-items: center;
+            justify-content: center;
+            background-size: cover; /* Adjust the background size to cover the entire body */
+            background-position: center; /* Center the background image */
+            background-repeat: repeat; /* Do not repeat the background image */
+            height: auto; /* Ensure the body takes up the full height of the viewport */
+            
+            background-image:url(/static/bg.png);
+    
+    
+}
+
+.main {
+    margin: 20px;
+    margin-left: 20px;
+
+}
+
+.top-image {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px 
+}
+
+.top-image img {
+    width: auto;
+    height: auto;
+    
+}
+
+.form-group {
+    margin-top: 20px; /* Adjust as needed */
+}
+
+
+
+/* Add other styles for your content as needed */
+
+.container1 {
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+    
+    min-width: auto;
+    max-width: 800px; /* Set a specific max-width or adjust as needed */
+    margin: 30px auto;
+    background-color: rgba(0, 0, 0, 0.464);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.container2{
+    position: relative;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: auto;
+    max-width: 800px; /* Set a specific max-width or adjust as needed */
+    background-color: rgba(0, 0, 0, 0.458);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px
+}
+.container-result {
+    position: relative;
+    min-width: auto;
+    background-color: rgba(0, 0, 0, 0.859);
+    max-width: 800px; /* Set a specific max-width or adjust as needed */
+    margin: 50px auto;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.619);
+}
+h2,td,th{
+    color: #fff;
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 10px;
+    }
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+.form-control {
+    background-color: rgba(0, 0, 0, 0.581);
+}
+h1 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #cbcbcb;
+    margin-top: 50px;
+}
+h2 {
+    color: #cbcbcb;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+.input-group-text {
+    background-color: #1e1e1e;
+}
+label {
+    color: #cbcbcb;
+    display: inline-flex;
+    margin: 10px 0;
+}
+
+.input-field {
+    background-color: rgba(0, 0, 0, 0.581);
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #1b1b1bdb;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #202020; 
+    border-color: #8a8a8a;}
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.833);
+}
+
+footer {
+    margin-right: 20px;
+    color: #fff;
+}
